@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "steps-demo",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "steps",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/steps/steps-demo.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ArrowLeftIcon, ArrowRightIcon } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Steps } from \"@/components/ui/steps\"\n\nconst steps = [\n  {\n    id: \"profile\",\n    label: \"Profile\",\n    description: \"Basics for the flow\",\n  },\n  {\n    id: \"photos\",\n    label: \"Photos\",\n    description: \"Upload the source\",\n  },\n  {\n    id: \"style\",\n    label: \"Style\",\n    description: \"Choose the look\",\n  },\n  {\n    id: \"review\",\n    label: \"Review\",\n    description: \"Confirm details\",\n  },\n]\n\nexport default function StepsDemo() {\n  const [currentStepIndex, setCurrentStepIndex] = React.useState(1)\n\n  return (\n    <div className=\"grid gap-6\">\n      <Steps steps={steps} currentStepIndex={currentStepIndex} />\n      <div className=\"flex justify-between gap-3\">\n        <Button\n          variant=\"outline\"\n          onClick={() => setCurrentStepIndex((step) => Math.max(0, step - 1))}\n          disabled={currentStepIndex === 0}\n        >\n          <ArrowLeftIcon data-icon=\"inline-start\" />\n          Back\n        </Button>\n        <Button\n          onClick={() =>\n            setCurrentStepIndex((step) => Math.min(steps.length - 1, step + 1))\n          }\n          disabled={currentStepIndex === steps.length - 1}\n        >\n          Next\n          <ArrowRightIcon data-icon=\"inline-end\" />\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

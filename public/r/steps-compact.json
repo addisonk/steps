@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "steps-compact",
+  "registryDependencies": [
+    "steps"
+  ],
+  "files": [
+    {
+      "path": "registry/steps/steps-compact.tsx",
+      "content": "import { Steps } from \"@/components/ui/steps\"\n\nconst steps = [\n  { id: \"cart\", label: \"Cart\" },\n  { id: \"address\", label: \"Address\" },\n  { id: \"payment\", label: \"Payment\" },\n  { id: \"confirm\", label: \"Confirm\" },\n]\n\nexport default function StepsCompact() {\n  return (\n    <Steps\n      steps={steps}\n      currentStep=\"payment\"\n      size=\"sm\"\n      showDescriptions={false}\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

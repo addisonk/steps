@@ -1,0 +1,56 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "steps",
+  "homepage": "https://github.com/addisonk/steps",
+  "items": [
+    {
+      "name": "steps",
+      "type": "registry:ui",
+      "title": "Steps",
+      "description": "A horizontal progress steps component for multi-step flows.",
+      "dependencies": ["lucide-react"],
+      "categories": ["navigation", "progress"],
+      "files": [
+        {
+          "path": "registry/steps/steps.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/steps.tsx"
+        }
+      ]
+    },
+    {
+      "name": "steps-demo",
+      "type": "registry:example",
+      "registryDependencies": ["steps", "button"],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/steps/steps-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "steps-compact",
+      "type": "registry:example",
+      "registryDependencies": ["steps"],
+      "files": [
+        {
+          "path": "registry/steps/steps-compact.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "steps-clickable",
+      "type": "registry:example",
+      "registryDependencies": ["steps"],
+      "files": [
+        {
+          "path": "registry/steps/steps-clickable.tsx",
+          "type": "registry:example"
+        }
+      ]
+    }
+  ]
+}
