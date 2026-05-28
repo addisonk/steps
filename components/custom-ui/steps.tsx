@@ -91,7 +91,8 @@ function Steps({
               <span
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  status === "complete" && "text-primary",
+                  status === "complete" &&
+                    "text-foreground group-hover/step:text-primary",
                   status === "current" && "text-primary",
                   status === "upcoming" && "text-muted-foreground",
                   step.disabled && "text-muted-foreground/50"
@@ -104,7 +105,8 @@ function Steps({
                 <span
                   className={cn(
                     "text-sm font-medium transition-colors",
-                    status === "complete" && "text-foreground",
+                    status === "complete" &&
+                      "text-muted-foreground group-hover/step:text-primary/70",
                     status === "current" && "text-foreground",
                     status === "upcoming" && "text-muted-foreground/50",
                     step.disabled && "text-muted-foreground/40"
@@ -119,7 +121,8 @@ function Steps({
 
           const itemClassName = cn(
             "group flex h-full flex-col border-l-4 py-2 pl-4 text-left transition-colors sm:border-t-4 sm:border-l-0 sm:pt-4 sm:pb-0 sm:pl-0",
-            status === "complete" && "border-primary",
+            status === "complete" &&
+              "border-primary/60 hover:border-primary/80",
             status === "current" && "border-primary",
             status === "upcoming" && "border-muted",
             interactive &&
