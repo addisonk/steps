@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/steps/steps-clickable.tsx",
-      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Steps } from \"@/components/ui/steps\"\n\nconst steps = [\n  {\n    id: \"draft\",\n    label: \"Draft\",\n    description: \"Write the brief\",\n  },\n  {\n    id: \"assets\",\n    label: \"Assets\",\n    description: \"Add references\",\n  },\n  {\n    id: \"settings\",\n    label: \"Settings\",\n    description: \"Tune output\",\n  },\n  {\n    id: \"publish\",\n    label: \"Publish\",\n    description: \"Ship the job\",\n  },\n]\n\nexport default function StepsClickable() {\n  const [currentStep, setCurrentStep] = React.useState(\"assets\")\n\n  return (\n    <Steps\n      steps={steps}\n      currentStep={currentStep}\n      onStepSelect={(step) => setCurrentStep(String(step.id))}\n    />\n  )\n}\n",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Steps } from \"@/components/custom-ui/steps\"\n\nconst steps = [\n  {\n    id: \"draft\",\n    title: \"Draft\",\n    description: \"Write the brief\",\n  },\n  {\n    id: \"assets\",\n    title: \"Assets\",\n    description: \"Add references\",\n  },\n  {\n    id: \"settings\",\n    title: \"Settings\",\n    description: \"Tune output\",\n  },\n  {\n    id: \"publish\",\n    title: \"Publish\",\n    description: \"Ship the job\",\n  },\n]\n\nexport default function StepsClickable() {\n  const [currentStep, setCurrentStep] = React.useState(\"assets\")\n\n  return (\n    <Steps\n      steps={steps}\n      currentStep={currentStep}\n      onStepSelect={(step) => setCurrentStep(String(step.id))}\n    />\n  )\n}\n",
       "type": "registry:example"
     }
   ],

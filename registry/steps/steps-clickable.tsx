@@ -2,27 +2,27 @@
 
 import * as React from "react"
 
-import { Steps } from "@/components/ui/steps"
+import { Steps } from "@/components/custom-ui/steps"
 
 const steps = [
   {
     id: "draft",
-    label: "Draft",
+    title: "Draft",
     description: "Write the brief",
   },
   {
     id: "assets",
-    label: "Assets",
+    title: "Assets",
     description: "Add references",
   },
   {
     id: "settings",
-    label: "Settings",
+    title: "Settings",
     description: "Tune output",
   },
   {
     id: "publish",
-    label: "Publish",
+    title: "Publish",
     description: "Ship the job",
   },
 ]

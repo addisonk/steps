@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/steps/steps-compact.tsx",
-      "content": "import { Steps } from \"@/components/ui/steps\"\n\nconst steps = [\n  { id: \"cart\", label: \"Cart\" },\n  { id: \"address\", label: \"Address\" },\n  { id: \"payment\", label: \"Payment\" },\n  { id: \"confirm\", label: \"Confirm\" },\n]\n\nexport default function StepsCompact() {\n  return (\n    <Steps\n      steps={steps}\n      currentStep=\"payment\"\n      size=\"sm\"\n      showDescriptions={false}\n    />\n  )\n}\n",
+      "content": "import { Steps } from \"@/components/custom-ui/steps\"\n\nconst steps = [\n  { id: \"cart\", title: \"Cart\" },\n  { id: \"address\", title: \"Address\" },\n  { id: \"payment\", title: \"Payment\" },\n  { id: \"confirm\", title: \"Confirm\" },\n]\n\nexport default function StepsCompact() {\n  return <Steps steps={steps} currentStep=\"payment\" showDescriptions={false} />\n}\n",
       "type": "registry:example"
     }
   ],

@@ -4,27 +4,27 @@ import * as React from "react"
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Steps } from "@/components/ui/steps"
+import { Steps } from "@/components/custom-ui/steps"
 
 const steps = [
   {
     id: "profile",
-    label: "Profile",
+    title: "Step 1",
     description: "Basics for the flow",
   },
   {
     id: "photos",
-    label: "Photos",
+    title: "Step 2",
     description: "Upload the source",
   },
   {
     id: "style",
-    label: "Style",
+    title: "Step 3",
     description: "Choose the look",
   },
   {
     id: "review",
-    label: "Review",
+    title: "Step 4",
     description: "Confirm details",
   },
 ]

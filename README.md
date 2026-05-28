@@ -1,12 +1,12 @@
 # Steps
 
-A reusable horizontal steps component for showing where someone is in a multi-step process.
+A segmented steps navigation component for showing where someone is in a multi-step process.
 
 ## Preview
 
-![Animated steps component moving through a four step onboarding flow](public/readme/steps-progress.gif)
+![Animated segmented steps component moving through a four step training flow](public/readme/steps-progress.gif)
 
-![Horizontal steps component with completed, current, and upcoming states](public/readme/steps-overview.png)
+![Segmented steps component with completed, current, and upcoming states](public/readme/steps-overview.png)
 
 ![Compact steps component for a checkout flow](public/readme/steps-compact.png)
 
@@ -21,22 +21,22 @@ npx shadcn@latest add https://raw.githubusercontent.com/addisonk/steps/main/publ
 ## Usage
 
 ```tsx
-import { Steps } from "@/components/ui/steps"
+import { Steps } from "@/components/custom-ui/steps"
 
 const steps = [
-  { id: "profile", label: "Profile", description: "Tell us about you" },
-  { id: "photos", label: "Photos", description: "Upload your images" },
-  { id: "style", label: "Style", description: "Choose the look" },
-  { id: "review", label: "Review", description: "Confirm details" },
+  { id: "basic-info", title: "Step 1", description: "Basic info and Selfie" },
+  { id: "photo-pack", title: "Step 2", description: "Photo pack selection" },
+  { id: "upload-photos", title: "Step 3", description: "Upload photos" },
+  { id: "review", title: "Step 4", description: "Review & submit" },
 ]
 
-<Steps steps={steps} currentStep="photos" />
+<Steps steps={steps} currentStep="photo-pack" />
 ```
 
 ### Clickable steps
 
 ```tsx
-const [currentStep, setCurrentStep] = React.useState("profile")
+const [currentStep, setCurrentStep] = React.useState("photo-pack")
 
 <Steps
   steps={steps}
@@ -50,9 +50,8 @@ const [currentStep, setCurrentStep] = React.useState("profile")
 ```tsx
 <Steps
   steps={steps}
-  currentStep="style"
+  currentStep="upload-photos"
   showDescriptions={false}
-  size="sm"
 />
 ```
 
@@ -60,14 +59,11 @@ const [currentStep, setCurrentStep] = React.useState("profile")
 
 | Prop | Description |
 |------|-------------|
-| `steps` | Array of steps with `id`, `label`, optional `description`, optional `href`, and optional `disabled`. |
+| `steps` | Array of steps with `id`, `title`, optional `description`, optional `href`, optional `status`, and optional `disabled`. |
 | `currentStep` | Current step id. |
 | `currentStepIndex` | Current step index. Useful when ids are not available. |
 | `onStepSelect` | Optional callback that makes steps interactive. |
-| `size` | `sm`, `default`, or `lg`. |
-| `showLabels` | Show or hide step labels. |
 | `showDescriptions` | Show or hide step descriptions. |
-| `showProgress` | Show or hide the top progress bar. |
 
 ## License
 

@@ -7,14 +7,13 @@
       "name": "steps",
       "type": "registry:ui",
       "title": "Steps",
-      "description": "A horizontal progress steps component for multi-step flows.",
-      "dependencies": ["lucide-react"],
+      "description": "A segmented steps navigation component for multi-step flows.",
       "categories": ["navigation", "progress"],
       "files": [
         {
           "path": "registry/steps/steps.tsx",
           "type": "registry:ui",
-          "target": "components/ui/steps.tsx"
+          "target": "components/custom-ui/steps.tsx"
         }
       ]
     },

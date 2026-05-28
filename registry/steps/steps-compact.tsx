@@ -1,19 +1,12 @@
-import { Steps } from "@/components/ui/steps"
+import { Steps } from "@/components/custom-ui/steps"
 
 const steps = [
-  { id: "cart", label: "Cart" },
-  { id: "address", label: "Address" },
-  { id: "payment", label: "Payment" },
-  { id: "confirm", label: "Confirm" },
+  { id: "cart", title: "Cart" },
+  { id: "address", title: "Address" },
+  { id: "payment", title: "Payment" },
+  { id: "confirm", title: "Confirm" },
 ]
 
 export default function StepsCompact() {
-  return (
-    <Steps
-      steps={steps}
-      currentStep="payment"
-      size="sm"
-      showDescriptions={false}
-    />
-  )
+  return <Steps steps={steps} currentStep="payment" showDescriptions={false} />
 }
